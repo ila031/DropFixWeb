@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drop Fix It - Create Account</title>
+  <title>Drop Fix It - Payment</title>
   <link rel="stylesheet" href="style/style.css" />
   <style>
     body {
@@ -16,6 +16,7 @@
       height: 100vh;
       color: white;
     }
+
     .container {
       position: relative;
       text-align: center;
@@ -24,30 +25,42 @@
       max-width: 400px;
       color: white;
     }
+
     .logo {
       display: block;
       margin: 0 auto 20px;
       width: 120px;
       height: auto;
     }
+
     h1 {
-      margin: 10px 0;
+      margin: 10px 0 20px;
       color: white;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin: 10px auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-      font-size: 16px;
-      color: black;
+
+    .fee-breakdown {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 20px;
     }
-    .primary-button {
+
+    .fee-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .total {
+      font-weight: bold;
+      border-top: 1px solid #888;
+      padding-top: 10px;
+      margin-top: 15px;
+    }
+
+    .pay-button {
       background-color: #f97316;
       color: white;
       border: none;
@@ -56,8 +69,8 @@
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 15px;
     }
+
     .back-button {
       position: absolute;
       top: 20px;
@@ -79,14 +92,30 @@
 </head>
 <body>
   <div class="container">
-    <button class="back-button" onclick="location.href='signin.html'">&larr;</button>
+    <button class="back-button" onclick="location.href='confirm.html'">&larr;</button>
     <img src="image/logo.jpeg" alt="Drop Fix It Logo" class="logo" />
-    <h1>Create Account</h1>
-    <input type="text" placeholder="Full Name" />
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <input type="password" placeholder="Confirm Password" />
-    <button class="primary-button" onclick="location.href='request.html'">Create Account</button>
+    <h1>Payment Details</h1>
+
+    <div class="fee-breakdown">
+      <div class="fee-item">
+        <span>Service Fee</span>
+        <span>$50.00</span>
+      </div>
+      <div class="fee-item">
+        <span>Platform Fee</span>
+        <span>$5.00</span>
+      </div>
+      <div class="fee-item">
+        <span>Taxes</span>
+        <span>$3.25</span>
+      </div>
+      <div class="fee-item total">
+        <span>Total</span>
+        <span>$58.25</span>
+      </div>
+    </div>
+
+    <button class="pay-button" onclick="location.href='wait.html'">Pay</button>
   </div>
 </body>
 </html>
