@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drop Fix It - Choose Role</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      color: white;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 30px;
+      width: 120px;
+      height: auto;
+    }
+    h1 {
+      margin: 10px 0 30px;
+      color: white;
+    }
+    .role-button {
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.2s;
+    }
+    .role-button:hover {
+      background-color: #ea580c;
+    }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #f97316;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      padding: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="back-button" onclick="location.href='index.html'">&larr;</button>
+    <img src="image/logo.jpeg" alt="Drop Fix It Logo" class="logo" />
+    <h1>Sign Up As</h1>
+    <button class="role-button" onclick="location.href='account.html'">Client</button>
+    <button class="role-button" onclick="location.href='contractor-create.html'">Contractor</button>
+  </div>
+</body>
+</html>

@@ -71,16 +71,34 @@
       font-size: 18px;
     }
 
-    .confirm-button {
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .button {
       background-color: #f97316;
       color: white;
       border: none;
       padding: 12px;
-      width: 100%;
+      flex: 1;
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 20px;
+    }
+
+    .negotiate-link {
+      display: block;
+      margin-top: 15px;
+      color: #f97316;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .negotiate-link:hover {
+      text-decoration: underline;
     }
 
     .back-button {
@@ -109,7 +127,6 @@
     <h1>Confirm Your Request</h1>
 
     <div class="map-container">
-      <!-- Replace src with your own map location if needed -->
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12648.53309175047!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1618318057107!5m2!1sen!2sus"
         allowfullscreen=""
@@ -123,7 +140,12 @@
       <div class="contractor-price">$65.00</div>
     </div>
 
-    <button class="confirm-button" onclick="location.href='pay.html'">Confirm</button>
+    <div class="button-group">
+      <button class="button" onclick="location.href='pay.html'">Confirm</button>
+      <button class="button" onclick="location.href='request.html'">Decline</button>
+    </div>
+
+    <a href="tel:+1234567890" class="negotiate-link">Negotiate with Contractor</a>
   </div>
 </body>
 </html>
