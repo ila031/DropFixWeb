@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drop Fix It - Request</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      color: white;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 120px;
+      height: auto;
+    }
+    h1, h2 {
+      margin: 10px 0;
+      color: white;
+    }
+    select, textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: black;
+    }
+    select option {
+      color: black;
+      background: white;
+    }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #f97316; /* orange */
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      padding: 0;
+      user-select: none;
+    }
+    .back-button:hover {
+      background-color: #e3640f;
+    }
+    button.submit-button {
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="back-button" onclick="location.href='signin.html'">&larr;</button>
+    <img src="image/logo.jpeg" alt="Drop Fix It Logo" class="logo" />
+    <h1>Drop Fix It</h1>
+    <h2>REQUEST A SERVICE</h2>
+    <select id="serviceSelect">
+      <option value="" disabled selected>Choose a service</option>
+      <option value="1">Plumbing</option>
+      <option value="2">Electrical</option>
+      <option value="3">Option 3</option>
+    </select>
+    <textarea placeholder="Describe your issue or request..."></textarea>
+    <button class="submit-button">Submit</button>
+  </div>
+</body>
+</html>

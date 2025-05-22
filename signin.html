@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drop Fix It - Sign In</title>
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; /* added to ensure text color for inheritance */
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+  }
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .primary-button {
+    background-color: #f97316; /* orange close to Drop Fix It logo */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .center-text {
+    margin-top: 15px;
+  }
+  .link {
+    color: inherit; /* same color as surrounding text */
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="image/logo.jpeg" alt="Drop Fix It Logo" class="logo" />
+    <h1>Sign In</h1>
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <button onclick="location.href='request.html'" class="primary-button">Sign In</button>
+    <p class="center-text">Don't have an account?
+      <a href="account.html" class="link">Create Account</a>
+    </p>
+  </div>
+</body>
+</html>
